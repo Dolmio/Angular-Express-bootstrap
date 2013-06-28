@@ -3,6 +3,7 @@ var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
+var path = require('path');
 
 module.exports = function (grunt) {
 
@@ -48,19 +49,33 @@ module.exports = function (grunt) {
                 '© <%= grunt.template.today("yyyy") %> <%= appConfig.info.author.name %> ' +
                 '- <%= appConfig.info.author.email %> - <%= appConfig.info.author.twitter %> */\n',
 
+        express: {
+            start: {
+                options: {
+                    port: appConfig.server.port,
+                    bases: '.tmp',
+                    server: path.resolve('./server/server')
+                }
+            }
+        },
         /*
          * Watch and Reload Tasks
          */
 
         watch: {
-            livereload: {
+            options: {
+                livereload: true,
+            },
+            css: {
                 files: [
-                    '<%= yeoman.app %>/{,*/}*.html',
+                    '<%= yeoman.app %>/**/*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
+                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.server %>/**/*.js'
                 ],
-                tasks: ['livereload']
+
+
             },
             less: {
                 files: [
@@ -425,7 +440,7 @@ module.exports = function (grunt) {
             server: {
                 command: [
                     'open http://localhost:' + appConfig.server.port,
-                    'node <%= yeoman.dist %>/server/server.js'
+                    ' NODE_ENV=production node <%= yeoman.dist %>/server/server.js'
                 ].join('&&'),
                 options: {
                     stdout: true,
@@ -476,8 +491,6 @@ module.exports = function (grunt) {
     // --
     // ------------------------------------------------------
 
-    // Prelim task rename
-    grunt.renameTask( 'regarde', 'watch' );
 
     /**
      * Server
@@ -488,7 +501,6 @@ module.exports = function (grunt) {
     var tasks = [
         'clean:server',
         'less:dev',
-        'livereload-start',
         'connect:livereload',
         'open',
         'watch'
@@ -588,7 +600,6 @@ module.exports = function (grunt) {
     // Useful for testing built code
     var openTasks = [
         'clean:server',
-        'livereload-start',
         'open:server',
         'connect:production'
     ];
@@ -647,6 +658,13 @@ module.exports = function (grunt) {
             'clean:jshint'
         ]
     );
+
+    grunt.registerTask('express-server', [
+        'clean:server',
+        'express:start',
+        'open',
+        'watch'
+    ]);
 
     /**
      * Default Grunt Task

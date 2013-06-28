@@ -16,7 +16,7 @@ var server = exports.server = express();
 
 // Configure Server
 server.configure( function() {
-    server.set( 'port', process.env.PORT || appConfig.server.port );
+    server.set( 'port', process.env.PORT || appConfig.server.port);
     server.set( 'views', path.join( __dirname, './../app' ) );
     server.engine( 'html', cons.hogan );
     server.set( 'view engine', 'html' );
@@ -27,6 +27,7 @@ server.configure( function() {
     server.use( express.methodOverride() );
     server.use( express.static( path.join( __dirname, './../app' ) ) );
     server.use( server.router );
+    console.log(appConfig.server.port);
 } );
 
 server.configure( 'development', function() {
@@ -37,11 +38,23 @@ server.configure( 'production', function() {
     server.use( express.errorHandler() );
 } );
 
+if(server.settings.env === 'development'){
+    var createdServer = require('http').createServer(server);
+    exports.io = require('socket.io').listen(createdServer);
+    // delegates user() function
+    //this is needed for socket.io instantiation to work with express-grunt
+    createdServer.use = function() {
+        server.use.apply(server, arguments);
+    };
 
-// Start server - hook in sockets instance
-exports.io = io.listen( http.createServer( server ).listen( server.get( 'port' ), function() {
-    console.log( 'Express server listening on ' + server.get( 'port' ) );
-} ) );
+}
+else{
+  // In prod grunt-express doesn't call listen for us
+    exports.io = io.listen( http.createServer( server ).listen( server.get( 'port' ), function() {
+        console.log( 'Express server listening on ' + server.get( 'port' ) );
+    }));
+}
+
 
 // Configure Routes
 require( './routes' );
@@ -51,3 +64,6 @@ require( './sockets');
 
 // Configure Database
 require( './db' );
+exports = module.exports = createdServer;
+
+
