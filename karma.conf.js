@@ -12,10 +12,8 @@ files = [
   'app/components/angular-bootstrap/*.js',
   'app/components/socket.io-client/dist/*js',
   'app/components/angular-socket-io/*.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
+  'app/scripts/**/*.coffee',
+  'test/spec/client/**/*.coffee'
 ];
 
 // list of files to exclude
