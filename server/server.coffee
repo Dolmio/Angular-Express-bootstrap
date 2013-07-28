@@ -56,5 +56,5 @@ require "./routes/index"
 require "./sockets/index"
 
 # Configure Database
-require "./db/index"
+require "./db/db"
 module.exports = createdServer

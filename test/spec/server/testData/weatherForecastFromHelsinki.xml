@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:FeatureCollection
+    timeStamp="2013-07-28T15:15:59Z"
+    numberMatched="3"
+    numberReturned="3"
+    xmlns:wfs="http://www.opengis.net/wfs/2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:omso="http://inspire.ec.europa.eu/schemas/omso/2.0rc3"
+    xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0rc3"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:swe="http://www.opengis.net/swe/2.0"
+    xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    xmlns:sam="http://www.opengis.net/sampling/2.0"
+    xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+    xmlns:wml2="http://www.opengis.net/waterml/2.0"
+    xmlns:target="http://xml.fmi.fi/namespace/om/atmosphericfeatures/0.95"
+    xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd
+    http://www.opengis.net/gmlcov/1.0 http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd
+    http://www.opengis.net/sampling/2.0 http://schemas.opengis.net/sampling/2.0/samplingFeature.xsd
+    http://www.opengis.net/samplingSpatial/2.0 http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd
+    http://www.opengis.net/swe/2.0 http://schemas.opengis.net/sweCommon/2.0/swe.xsd
+    http://inspire.ec.europa.eu/schemas/omso/2.0rc3 http://inspire.ec.europa.eu/draft-schemas/omso/2.0rc3/SpecialisedObservations.xsd
+    http://inspire.ec.europa.eu/schemas/ompr/2.0rc3 http://inspire.ec.europa.eu/draft-schemas/ompr/2.0rc3/Processes.xsd
+    http://www.opengis.net/waterml/2.0 http://inspire.ec.europa.eu/draft-schemas/waterml/2.0rfc/waterml2.xsd
+    http://xml.fmi.fi/namespace/om/atmosphericfeatures/0.95 http://xml.fmi.fi/schema/om/atmosphericfeatures/0.95/atmosphericfeatures.xsd">
+
+    
+    <wfs:member>
+        <omso:PointTimeSeriesObservation gml:id="WFS-L5kfCUHZ.gEuyBpHpg8lnbz9Ly2JTowtIWbbpdOs2_llx4efR060aeWzDtdOufXlmw48rp1w36d3R066aduXth2dcvDDp5QtLFlz6d1TTty2vfoU7xv11hMbHy51qRaFOO6dNGTVwzsu7JU07ctr36FO.b76zgzad2Sdlw8svPpWw7NOSQzM.Xfpyc6zGzVwyZNWlsy9suyp54ZamZs348OzLWpm0340ld16ZnDW24fETTz6Yd2PLStXQgNbbp589O7PUy.OlY07DOZW3fky7KzNGnlsw7WVww8sO2tbpl28MvLD068src59N_LLk49cvLzf05K6Qs23S6dZt_LLjw8.jp1o08tmHa6dc.vLNhx5XTrhv07ujp1007cvbDs65eGHTyaHTTty0.mXhPyE0Omnbltb92WsarUhgA---temperature">
+	                     <om:phenomenonTime>
+                <gml:TimePeriod gml:id="time-interval-1-1">
+                    <gml:beginPosition>2013-07-28T16:00:00Z</gml:beginPosition>
+                    <gml:endPosition>2013-07-30T03:00:00Z</gml:endPosition>
+                </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime>
+                <gml:TimeInstant gml:id="time-1-1">
+                    <gml:timePosition>2013-07-28T06:00:00Z</gml:timePosition>
+                </gml:TimeInstant>
+            </om:resultTime> 
+
+	    <om:procedure xlink:href="http://xml.fmi.fi/inspire/process/hirlam"/>
+	                <om:parameter>
+                <om:NamedValue>
+                    <om:name xlink:href="http://inspire.ec.europa.eu/codeList/ProcessParameterValue/value/numericalModel/analysisTime"/>
+                    <om:value>
+                        <gml:TimeInstant gml:id="analysis-time-1-1-temperature--"> 
+                            <gml:timePosition>2013-07-28T06:00:00Z</gml:timePosition> 
+                        </gml:TimeInstant>
+                    </om:value>
+                </om:NamedValue>
+            </om:parameter>
+
+            <om:observedProperty  xlink:href="http://data.fmi.fi/fmi-apikey/a3a7cb9b-6c34-4b57-83cb-d666c0aaee45/meta?observableProperty=forecast&amp;param=temperature&amp;language=eng"/>
+	                <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="enn-s-1-1-temperature">
+          <sam:sampledFeature>
+		<target:LocationCollection gml:id="sampled-target-1-1-temperature">
+		    <target:member>
+		    <target:Location gml:id="forloc-geoid-658225-pos-temperature">
+		        <gml:identifier codeSpace="http://xml.fmi.fi/namespace/stationcode/geoid">658225</gml:identifier>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/name">Helsinki</gml:name>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/geoid">658225</gml:name>
+			<target:representativePoint xlink:href="#point-658225-temperature"/>
+			<target:country codeSpace="http://xml.fmi.fi/namespace/location/country">Republic of Finland</target:country>
+			<target:timezone>Europe/Helsinki</target:timezone>
+			<target:region codeSpace="http://xml.fmi.fi/namespace/location/region">Helsinki</target:region>	   			
+		    </target:Location></target:member>
+		</target:LocationCollection>
+ 	   </sam:sampledFeature>
+                <sams:shape>
+                    <gml:MultiPoint gml:id="foi-multipoint-1-1-temperature">
+                        <gml:pointMembers> 
+                           <gml:Point gml:id="point-658225-temperature" srsName="http://www.opengis.net/def/crs/EPSG/0/4258" srsDimension="2">
+                               <gml:name>Helsinki</gml:name>
+                               <gml:pos>60.16950 24.93540 </gml:pos>
+                           </gml:Point>
+                        </gml:pointMembers>
+                    </gml:MultiPoint>
+                </sams:shape>
+            </sams:SF_SpatialSamplingFeature>
+        </om:featureOfInterest>
+                        <om:result>
+                    <wml2:MeasurementTimeseries gml:id="mts-1-1-temperature">  
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T16:00:00Z</wml2:time>
+				      <wml2:value>18.39</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T17:00:00Z</wml2:time>
+				      <wml2:value>18.11</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T18:00:00Z</wml2:time>
+				      <wml2:value>17.52</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T19:00:00Z</wml2:time>
+				      <wml2:value>16.62</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T20:00:00Z</wml2:time>
+				      <wml2:value>16.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T21:00:00Z</wml2:time>
+				      <wml2:value>15.73</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T22:00:00Z</wml2:time>
+				      <wml2:value>15.54</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T23:00:00Z</wml2:time>
+				      <wml2:value>15.2</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T00:00:00Z</wml2:time>
+				      <wml2:value>14.87</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T01:00:00Z</wml2:time>
+				      <wml2:value>14.65</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T02:00:00Z</wml2:time>
+				      <wml2:value>14.21</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T03:00:00Z</wml2:time>
+				      <wml2:value>14.45</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T04:00:00Z</wml2:time>
+				      <wml2:value>15.37</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T05:00:00Z</wml2:time>
+				      <wml2:value>16.57</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T06:00:00Z</wml2:time>
+				      <wml2:value>17.45</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T07:00:00Z</wml2:time>
+				      <wml2:value>17.84</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T08:00:00Z</wml2:time>
+				      <wml2:value>17.91</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T09:00:00Z</wml2:time>
+				      <wml2:value>18.2</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T10:00:00Z</wml2:time>
+				      <wml2:value>18.29</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T11:00:00Z</wml2:time>
+				      <wml2:value>18.94</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T12:00:00Z</wml2:time>
+				      <wml2:value>19.17</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T13:00:00Z</wml2:time>
+				      <wml2:value>18.82</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T14:00:00Z</wml2:time>
+				      <wml2:value>18.97</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T15:00:00Z</wml2:time>
+				      <wml2:value>18.96</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T16:00:00Z</wml2:time>
+				      <wml2:value>18.43</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T17:00:00Z</wml2:time>
+				      <wml2:value>18.26</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T18:00:00Z</wml2:time>
+				      <wml2:value>18.1</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T19:00:00Z</wml2:time>
+				      <wml2:value>18.08</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T20:00:00Z</wml2:time>
+				      <wml2:value>18.15</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T21:00:00Z</wml2:time>
+				      <wml2:value>18.02</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T22:00:00Z</wml2:time>
+				      <wml2:value>17.98</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T23:00:00Z</wml2:time>
+				      <wml2:value>17.94</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T00:00:00Z</wml2:time>
+				      <wml2:value>18.01</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T01:00:00Z</wml2:time>
+				      <wml2:value>17.88</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T02:00:00Z</wml2:time>
+				      <wml2:value>17.69</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T03:00:00Z</wml2:time>
+				      <wml2:value>17.66</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                         
+                    </wml2:MeasurementTimeseries>
+                </om:result>
+
+        </omso:PointTimeSeriesObservation>
+    </wfs:member>
+
+    <wfs:member>
+        <omso:PointTimeSeriesObservation gml:id="WFS-3gA3IrOi4Df4jZx7FuZ7aNvDxzOJTowtIWbbpdOs2_llx4efR060aeWzDtdOufXlmw48rp1w36d3R066aduXth2dcvDDp5QtLFlz6d1TTty2vfoU7xv11hMbHy51qRaFOO6dNGTVwzsu7JU07ctr36FO.b76zgzad2Sdlw8svPpWw7NOSQzM.Xfpyc6zGzVwyZNWlsy9suyp54ZamZs348OzLWpm0340ld16ZnDW24fETTz6Yd2PLStXQgNbbp589O7PUy.OlY07DOZW3fky7KzNGnlsw7WVww8sO2tyvlw9NGXlT87cW_YzbnPpv5ZcnHrl5eb.nJXSFm26XTrNv5ZceHn0dOtGnlsw7XTrn15ZsOPK6dcN.nd0dOumnbl7YdnXLww6eTQ6aduWn0y8J.Qmh007ctrfuy1jVakM-WeatherSymbol3">
+	        
+	    <om:phenomenonTime xlink:href="#time-interval-1-1"/>
+	    <om:resultTime xlink:href="#time-1-1"/>
+
+	    <om:procedure xlink:href="http://xml.fmi.fi/inspire/process/hirlam"/>
+	                <om:parameter>
+                <om:NamedValue>
+                    <om:name xlink:href="http://inspire.ec.europa.eu/codeList/ProcessParameterValue/value/numericalModel/analysisTime"/>
+                    <om:value>
+                        <gml:TimeInstant gml:id="analysis-time-1-1-WeatherSymbol3--"> 
+                            <gml:timePosition>2013-07-28T06:00:00Z</gml:timePosition> 
+                        </gml:TimeInstant>
+                    </om:value>
+                </om:NamedValue>
+            </om:parameter>
+
+            <om:observedProperty  xlink:href="http://data.fmi.fi/fmi-apikey/a3a7cb9b-6c34-4b57-83cb-d666c0aaee45/meta?observableProperty=forecast&amp;param=WeatherSymbol3&amp;language=eng"/>
+	                <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="enn-s-1-1-WeatherSymbol3">
+          <sam:sampledFeature>
+		<target:LocationCollection gml:id="sampled-target-1-1-WeatherSymbol3">
+		    <target:member>
+		    <target:Location gml:id="forloc-geoid-658225-pos-WeatherSymbol3">
+		        <gml:identifier codeSpace="http://xml.fmi.fi/namespace/stationcode/geoid">658225</gml:identifier>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/name">Helsinki</gml:name>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/geoid">658225</gml:name>
+			<target:representativePoint xlink:href="#point-658225-WeatherSymbol3"/>
+			<target:country codeSpace="http://xml.fmi.fi/namespace/location/country">Republic of Finland</target:country>
+			<target:timezone>Europe/Helsinki</target:timezone>
+			<target:region codeSpace="http://xml.fmi.fi/namespace/location/region">Helsinki</target:region>	   			
+		    </target:Location></target:member>
+		</target:LocationCollection>
+ 	   </sam:sampledFeature>
+                <sams:shape>
+                    <gml:MultiPoint gml:id="foi-multipoint-1-1-WeatherSymbol3">
+                        <gml:pointMembers> 
+                           <gml:Point gml:id="point-658225-WeatherSymbol3" srsName="http://www.opengis.net/def/crs/EPSG/0/4258" srsDimension="2">
+                               <gml:name>Helsinki</gml:name>
+                               <gml:pos>60.16950 24.93540 </gml:pos>
+                           </gml:Point>
+                        </gml:pointMembers>
+                    </gml:MultiPoint>
+                </sams:shape>
+            </sams:SF_SpatialSamplingFeature>
+        </om:featureOfInterest>
+                        <om:result>
+                    <wml2:MeasurementTimeseries gml:id="mts-1-1-WeatherSymbol3">  
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T16:00:00Z</wml2:time>
+				      <wml2:value>1.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T17:00:00Z</wml2:time>
+				      <wml2:value>1.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T18:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T19:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T20:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T21:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T22:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T23:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T00:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T01:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T02:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T03:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T04:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T05:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T06:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T07:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T08:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T09:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T10:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T11:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T12:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T13:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T14:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T15:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T16:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T17:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T18:00:00Z</wml2:time>
+				      <wml2:value>3.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T19:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T20:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T21:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T22:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T23:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T00:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T01:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T02:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T03:00:00Z</wml2:time>
+				      <wml2:value>2.0</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                         
+                    </wml2:MeasurementTimeseries>
+                </om:result>
+
+        </omso:PointTimeSeriesObservation>
+    </wfs:member>
+
+    <wfs:member>
+        <omso:PointTimeSeriesObservation gml:id="WFS-tdm.2vyHrqi21TNNrQXtn7iX3sOJTowtIWbbpdOs2_llx4efR060aeWzDtdOufXlmw48rp1w36d3R066aduXth2dcvDDp5QtLFlz6d1TTty2vfoU7xv11hMbHy51qRaFOO6dNGTVwzsu7JU07ctr36FO.b76zgzad2Sdlw8svPpWw7NOSQzM.Xfpyc6zGzVwyZNWlsy9suyp54ZamZs348OzLWpm0340ld16ZnDW24fETTz6Yd2PLStXQgNbbp589O7PUy.OlY07DOZW3fky7KzNGnlsw7WVww8sO2tDR126cmnp5bnPpv5ZcnHrl5eb.nJXSFm26XTrNv5ZceHn0dOtGnlsw7XTrn15ZsOPK6dcN.nd0dOumnbl7YdnXLww6eTQ6aduWn0y8J.Qmh007ctrfuy1jVakMA---humidity">
+	        
+	    <om:phenomenonTime xlink:href="#time-interval-1-1"/>
+	    <om:resultTime xlink:href="#time-1-1"/>
+
+	    <om:procedure xlink:href="http://xml.fmi.fi/inspire/process/hirlam"/>
+	                <om:parameter>
+                <om:NamedValue>
+                    <om:name xlink:href="http://inspire.ec.europa.eu/codeList/ProcessParameterValue/value/numericalModel/analysisTime"/>
+                    <om:value>
+                        <gml:TimeInstant gml:id="analysis-time-1-1-humidity--"> 
+                            <gml:timePosition>2013-07-28T06:00:00Z</gml:timePosition> 
+                        </gml:TimeInstant>
+                    </om:value>
+                </om:NamedValue>
+            </om:parameter>
+
+            <om:observedProperty  xlink:href="http://data.fmi.fi/fmi-apikey/a3a7cb9b-6c34-4b57-83cb-d666c0aaee45/meta?observableProperty=forecast&amp;param=humidity&amp;language=eng"/>
+	                <om:featureOfInterest>
+                <sams:SF_SpatialSamplingFeature gml:id="enn-s-1-1-humidity">
+          <sam:sampledFeature>
+		<target:LocationCollection gml:id="sampled-target-1-1-humidity">
+		    <target:member>
+		    <target:Location gml:id="forloc-geoid-658225-pos-humidity">
+		        <gml:identifier codeSpace="http://xml.fmi.fi/namespace/stationcode/geoid">658225</gml:identifier>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/name">Helsinki</gml:name>
+			<gml:name codeSpace="http://xml.fmi.fi/namespace/locationcode/geoid">658225</gml:name>
+			<target:representativePoint xlink:href="#point-658225-humidity"/>
+			<target:country codeSpace="http://xml.fmi.fi/namespace/location/country">Republic of Finland</target:country>
+			<target:timezone>Europe/Helsinki</target:timezone>
+			<target:region codeSpace="http://xml.fmi.fi/namespace/location/region">Helsinki</target:region>	   			
+		    </target:Location></target:member>
+		</target:LocationCollection>
+ 	   </sam:sampledFeature>
+                <sams:shape>
+                    <gml:MultiPoint gml:id="foi-multipoint-1-1-humidity">
+                        <gml:pointMembers> 
+                           <gml:Point gml:id="point-658225-humidity" srsName="http://www.opengis.net/def/crs/EPSG/0/4258" srsDimension="2">
+                               <gml:name>Helsinki</gml:name>
+                               <gml:pos>60.16950 24.93540 </gml:pos>
+                           </gml:Point>
+                        </gml:pointMembers>
+                    </gml:MultiPoint>
+                </sams:shape>
+            </sams:SF_SpatialSamplingFeature>
+        </om:featureOfInterest>
+                        <om:result>
+                    <wml2:MeasurementTimeseries gml:id="mts-1-1-humidity">  
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T16:00:00Z</wml2:time>
+				      <wml2:value>79.89</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T17:00:00Z</wml2:time>
+				      <wml2:value>79.38</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T18:00:00Z</wml2:time>
+				      <wml2:value>82.55</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T19:00:00Z</wml2:time>
+				      <wml2:value>89.46</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T20:00:00Z</wml2:time>
+				      <wml2:value>96.02</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T21:00:00Z</wml2:time>
+				      <wml2:value>99.05</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T22:00:00Z</wml2:time>
+				      <wml2:value>99.67</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-28T23:00:00Z</wml2:time>
+				      <wml2:value>99.96</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T00:00:00Z</wml2:time>
+				      <wml2:value>99.65</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T01:00:00Z</wml2:time>
+				      <wml2:value>99.39</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T02:00:00Z</wml2:time>
+				      <wml2:value>99.36</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T03:00:00Z</wml2:time>
+				      <wml2:value>99.33</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T04:00:00Z</wml2:time>
+				      <wml2:value>97.88</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T05:00:00Z</wml2:time>
+				      <wml2:value>93.66</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T06:00:00Z</wml2:time>
+				      <wml2:value>87.56</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T07:00:00Z</wml2:time>
+				      <wml2:value>85.09</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T08:00:00Z</wml2:time>
+				      <wml2:value>85.13</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T09:00:00Z</wml2:time>
+				      <wml2:value>82.02</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T10:00:00Z</wml2:time>
+				      <wml2:value>79.98</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T11:00:00Z</wml2:time>
+				      <wml2:value>73.95</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T12:00:00Z</wml2:time>
+				      <wml2:value>70.14</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T13:00:00Z</wml2:time>
+				      <wml2:value>70.43</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T14:00:00Z</wml2:time>
+				      <wml2:value>67.97</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T15:00:00Z</wml2:time>
+				      <wml2:value>68.57</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T16:00:00Z</wml2:time>
+				      <wml2:value>69.35</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T17:00:00Z</wml2:time>
+				      <wml2:value>72.93</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T18:00:00Z</wml2:time>
+				      <wml2:value>75.69</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T19:00:00Z</wml2:time>
+				      <wml2:value>76.86</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T20:00:00Z</wml2:time>
+				      <wml2:value>75.13</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T21:00:00Z</wml2:time>
+				      <wml2:value>74.98</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T22:00:00Z</wml2:time>
+				      <wml2:value>76.61</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-29T23:00:00Z</wml2:time>
+				      <wml2:value>79.49</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T00:00:00Z</wml2:time>
+				      <wml2:value>79.94</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T01:00:00Z</wml2:time>
+				      <wml2:value>80.87</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T02:00:00Z</wml2:time>
+				      <wml2:value>81.97</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                          
+                        <wml2:point>
+                            <wml2:MeasurementTVP> 
+                                      <wml2:time>2013-07-30T03:00:00Z</wml2:time>
+				      <wml2:value>82.15</wml2:value> 
+                            </wml2:MeasurementTVP>
+                        </wml2:point>                         
+                    </wml2:MeasurementTimeseries>
+                </om:result>
+
+        </omso:PointTimeSeriesObservation>
+    </wfs:member>
+
+</wfs:FeatureCollection>
