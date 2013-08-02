@@ -1,8 +1,9 @@
 appConfig = require "./../../app-config.json"
 http = require '../util/httpPromise'
 xmlParser = require '../util/xmlParser'
-db = require '../db/db'
+db = require('../db/db')()
 fs = require 'fs'
+q = require 'q'
 forecastCollection  = "forecasts"
 module.exports =
   updateForecasts: ->
@@ -15,9 +16,17 @@ module.exports =
     http.get(options).then((xmlResult) ->
       dataParser = require './weatherDataParser'
       dataParser.parseXmlToForecasts(xmlResult)
-      .then (forecasts)->
-          db.insert forecastCollection, forecasts
+        .then (forecasts)->
+          db.insert forecastCollection, {forecastCollection : forecasts, createdAt: new Date()}
     )
 
+  getForecasts: ->
+    db.findLatest(forecastCollection)
+      .then (forecastSnpashot) ->
+        deferred = q.defer()
+        if not forecastSnpashot then deferred.reject new Error('No forecasts found')
+        else
+          deferred.resolve forecastSnpashot.forecastCollection
+        deferred.promise
 
 

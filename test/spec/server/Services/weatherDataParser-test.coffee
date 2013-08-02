@@ -2,7 +2,7 @@ describe 'weatherDataParser', ->
   require '../../testHelpers'
   fs = require 'fs'
   parser = require '../../../../server/services/weatherDataParser'
-  xmlToParse =  fs.readFileSync('test/spec/server/testData/ForecastOfCitiesInFinland.xml', 'utf-8').toString()
+  xmlToParse =  fs.readFileSync('test/spec/server/testData/ForecastFromHelsinkiAndTurku.xml', 'utf-8').toString()
 
   it 'should parse Forecast objects from data', ->
     parser.parseXmlToForecasts(xmlToParse)

@@ -1,8 +1,16 @@
 appConfig = require("../../app-config.json")
-QMongoDB = require('q-mongodb');
-db = QMongoDB.db(appConfig.database.name)
+db = null
 
-module.exports =
+initDb = (dbName) ->
+  dbName = appConfig.database.name if not dbName
+  console.log "initialising db #{dbName}"
+  QMongoDB = require('q-mongodb')
+  db = QMongoDB.db(dbName)
+
+module.exports = (dbName) ->
+
+  if not db
+    initDb(dbName)
 
   insert : (collection, data) ->
     db.invoke('collection', collection)
@@ -12,6 +20,19 @@ module.exports =
     .fail((error) ->
         console.error "Insert failed: ",  error
     )
+
+  drop : ->
+    db.invoke('dropDatabase').then -> console.log "DROPPED Database"
+
+  findLatest : (collection) ->
+    db.invoke('collection', collection)
+    .then (collection) ->
+        collection.find({},{}, {sort: {'_id' :  -1}})
+    .invoke('nextObject')
+
+
+
+
 
 
 
