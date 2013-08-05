@@ -19,8 +19,14 @@
     "database" : {
         "host"          : "localhost",
         "port"          : 27017,
-        "name"          : "test_db",
+        "name"          : "weather_db",
         "collection"    : "test_col"
     },
-	"installed" :	true
+  "installed" :  true,
+  "weather_api_key" : "a3a7cb9b-6c34-4b57-83cb-d666c0aaee45",
+
+  "supportedQueryOperators" : ["greaterThan", "lessThan", "equals"],
+  "measuredFeatures" : ["temperature", "humidity", "weatherSymbol"],
+  "groupMatchers" : ["any", "all"]
+
 }
