@@ -16,7 +16,7 @@ module.exports = (dbName) ->
     db.invoke('collection', collection)
     .then( (collection) ->
       console.log "starting insert"
-      collection.insert(data))
+      collection.insert(data, {w : 1}))
     .fail((error) ->
         console.error "Insert failed: ",  error
     )
