@@ -34,5 +34,19 @@ describe 'weatherService', ->
     .fail (error) ->
         error.should.exist
 
+  it 'should get weather forecasts for location', ->
+    weatherService = @weatherService
+    weatherService.updateForecasts()
+      .then  ->
+        weatherService.getForecastsFor('Helsinki')
+      .then (forecastsForLocation) ->
+        forecastsForLocation.locationName.should.equal "Helsinki"
+        forecastsForLocation.loc.should.exist
+        forecastsForLocation.forecasts.should.have.length 36
+
+  it 'should throw error if no forecasts found for location', ->
+    @weatherService.getForecastsFor("Tokyo")
+      .fail (error) ->
+        error.should.exist
 
 

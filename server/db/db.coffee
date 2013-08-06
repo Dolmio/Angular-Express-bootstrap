@@ -24,10 +24,11 @@ module.exports = (dbName) ->
   drop : ->
     db.invoke('dropDatabase').then -> console.log "DROPPED Database"
 
-  findLatest : (collection) ->
+  findLatest : (collection, projection) ->
+    projection = projection || {}
     db.invoke('collection', collection)
     .then (collection) ->
-        collection.find({},{}, {sort: {'_id' :  -1}})
+        collection.find({},projection, {sort: {'_id' :  -1}})
     .invoke('nextObject')
 
 
