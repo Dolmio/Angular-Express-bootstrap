@@ -1,0 +1,91 @@
+{ "forecasts" : [ { "humidity" : 76.659999999999997,
+    "location" : { "loc" : { "lat" : 60.169499999999999,
+        "lng" : 24.935400000000001
+    },
+        "name" : "Helsinki"
+    },
+    "temperature" : 18.109999999999999,
+    "timestamp" : "2013-08-01T06:00:00Z",
+    "weatherSymbol" : 3
+},
+    { "humidity" : 90,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.129999999999999,
+        "timestamp" : "2013-08-01T07:00:00Z",
+        "weatherSymbol" : 3
+    },
+    { "humidity" : 70,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.309999999999999,
+        "timestamp" : "2013-08-01T08:00:00Z",
+        "weatherSymbol" : 31
+    },
+    { "humidity" : 70,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.48,
+        "timestamp" : "2013-08-01T09:00:00Z",
+        "weatherSymbol" : 31
+    },
+
+    { "humidity" : 95,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.129999999999999,
+        "timestamp" : "2013-08-01T10:00:00Z",
+        "weatherSymbol" : 3
+    },
+
+    { "humidity" : 0,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 25,
+        "timestamp" : "2013-08-02T00:00:00Z",
+        "weatherSymbol" : 3
+    },
+
+    { "humidity" : 5,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.48,
+        "timestamp" : "2013-08-02T05:00:00Z",
+        "weatherSymbol" : 31
+    },
+
+    { "humidity" : 5,
+        "location" : { "loc" : { "lat" : 60.169499999999999,
+            "lng" : 24.935400000000001
+        },
+            "name" : "Helsinki"
+        },
+        "temperature" : 18.48,
+        "timestamp" : "2013-08-02T06:00:00Z",
+        "weatherSymbol" : 31
+    }
+
+],
+    "loc" : { "lat" : 60.169499999999999,
+        "lng" : 24.935400000000001
+    },
+    "locationName" : "Helsinki"
+}

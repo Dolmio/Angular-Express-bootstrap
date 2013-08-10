@@ -30,6 +30,10 @@ module.exports =
       throw new Error("Invalid argument error:  #{queryName} should be in stored queries")
     _.extend storedQueries[queryName], {locationName: locationName}
 
+  buildRawQuery : (groupMatcher, feature, operator, valueToCompare, startTime, endTime) ->
+    new WeatherQuery(groupMatcher, feature, operator, valueToCompare, startTime, endTime)
+
+
 storedQueries =
   rainyInTheMorning : new WeatherQuery("any", "humidity", "greaterThan", 80, 7,9)
 
