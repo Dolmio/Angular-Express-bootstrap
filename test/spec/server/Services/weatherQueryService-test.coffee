@@ -2,6 +2,7 @@ describe 'weatherQueryService', ->
   require '../../testHelpers'
   rewire = require('rewire')
   builder = require '../../../../server/services/weatherQueryBuilder'
+  WeatherQuery = require '../../../../server/models/weatherQuery'
   fs = require 'fs'
   q = require 'q'
   moment = require 'moment'
@@ -27,61 +28,61 @@ describe 'weatherQueryService', ->
 
 
   it 'should not be dry at the morning', ->
-    query = builder.buildRawQuery("any", "humidity", "lessThan", 70, 7,9)
+    query = new WeatherQuery("any", "humidity", "lessThan", 70, 7,9)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal false
 
   it 'should not pay attention to forecast more than 23 hours ahead', ->
-    query = builder.buildRawQuery("any", "humidity", "lessThan", 10, 6,7)
+    query = new WeatherQuery("any", "humidity", "lessThan", 10, 6,7)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal false
 
   it 'should pay attention to forecast 23 hours ahead', ->
-    query = builder.buildRawQuery("any", "humidity", "lessThan", 10, 5,6)
+    query = new WeatherQuery("any", "humidity", "lessThan", 10, 5,6)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal true
 
   it 'should not pay attention to forecasts before startTime', ->
-    query = builder.buildRawQuery("any", "humidity", "greaterThan", 80, 8,9)
+    query = new WeatherQuery("any", "humidity", "greaterThan", 80, 8,9)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal false
 
   it 'should not pay attention to forecasts after endTime (endhour is excluded)', ->
-    query = builder.buildRawQuery("any", "humidity", "greaterThan", 90, 6,10)
+    query = new WeatherQuery("any", "humidity", "greaterThan", 90, 6,10)
     weatherQueryService.isPredicted(query)
       .then (result) ->
         result.should.equal false
 
   it 'should be possible to assign end hour greater smaller than start hour', ->
-    query = builder.buildRawQuery("any", "temperature", "greaterThan", 20, 23,1)
+    query = new WeatherQuery("any", "temperature", "greaterThan", 20, 23,1)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal true
 
   it "should be possible to use 'all' as a query matcher", ->
-    query = builder.buildRawQuery("all", "humidity", "greaterThan", 65, 6,11)
+    query = new WeatherQuery("all", "humidity", "greaterThan", 65, 6,11)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal true
 
   it "should notice if 'all' query parameter not matched", ->
-    query = builder.buildRawQuery("all", "humidity", "greaterThan", 65, 6,5)
+    query = new WeatherQuery("all", "humidity", "greaterThan", 65, 6,5)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal false
 
   it "should be possible to use equals as operator in the query", ->
-    query = builder.buildRawQuery("any", "weatherSymbol", "equals", 31, 6,5)
+    query = new WeatherQuery("any", "weatherSymbol", "equals", 31, 6,5)
     weatherQueryService.isPredicted(query)
     .then (result) ->
       result.should.equal true
 
   it "should not be able to find any matching weatherSymbols", ->
-    query = builder.buildRawQuery("any", "weatherSymbol", "equals", 0, 6,5)
+    query = new WeatherQuery("any", "weatherSymbol", "equals", 0, 6,5)
     weatherQueryService.isPredicted(query)
       .then (result) ->
         result.should.equal false
