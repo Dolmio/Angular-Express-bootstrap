@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             server: {
                 files: ['<%= yeoman.server %>/**/*',
                     'test/spec/server/**/*'],
-                tasks: ['coffee:server', 'simplemocha']
+                tasks: ['simplemocha', 'coffee:server']
             },
 
             client: {
