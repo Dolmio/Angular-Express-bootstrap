@@ -31,6 +31,20 @@ module.exports = (dbName) ->
         collection.find({},projection, {sort: {'_id' :  -1}})
     .invoke('nextObject')
 
+  find : (collection, query) ->
+    query = query || {}
+    db.invoke('collection', collection)
+    .then (collection) ->
+      collection.find(query)
+    .invoke('toArray')
+
+  findOne : (collection, query) ->
+    query = query || {}
+    db.invoke('collection', collection)
+    .then (collection) ->
+      collection.findOne(query)
+    .invoke('nextObject')
+
 
 
 
