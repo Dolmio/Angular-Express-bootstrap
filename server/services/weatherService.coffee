@@ -34,7 +34,7 @@ module.exports =
     db.findLatest(forecastCollection, {"forecastCollection" : {"$elemMatch" : {"locationName" : locationName}}})
       .then (forecastSnpashot) ->
         deferred = q.defer()
-        if not forecastSnpashot then deferred.reject new Error("No forecasts found for #{locationName}")
+        if not forecastSnpashot or not forecastSnpashot.forecastCollection then deferred.reject new Error("No forecasts found for #{locationName}")
         else
           deferred.resolve forecastSnpashot.forecastCollection[0]
         deferred.promise

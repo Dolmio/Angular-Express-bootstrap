@@ -45,8 +45,11 @@ describe 'weatherService', ->
         forecastsForLocation.forecasts.should.have.length 36
 
   it 'should throw error if no forecasts found for location', ->
-    @weatherService.getForecastsFor("Tokyo")
-      .fail (error) ->
-        error.should.exist
+    weatherService = @weatherService
+    weatherService.updateForecasts()
+    .then ->
+      weatherService.getForecastsFor("Tokyo")
+        .fail (error) ->
+          error.message.should.eql "No forecasts found for Tokyo"
 
 
