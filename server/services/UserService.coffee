@@ -9,7 +9,7 @@ module.exports =
 
   getUsersWhoWantNotificationsAtTimeframe : (startTime, endTime) ->
     db.find(userCollection, { '$and' :
-            [{'notificationTime' : {'$gte' : startTime}, 'notificationTime' : {'$lte' : endTime}}]})
+            [{'notificationTime' : {'$lte' : startTime}, 'notificationTime' : {'$gte' : endTime}}]})
 
   addUser : (user) ->
     db.insert(userCollection, user)
