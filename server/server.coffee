@@ -57,4 +57,6 @@ require "./sockets/index"
 
 # Configure Database
 require "./db/db"
+senderTask = require "./notification/senderTask"
+senderTask.start()
 module.exports = createdServer
