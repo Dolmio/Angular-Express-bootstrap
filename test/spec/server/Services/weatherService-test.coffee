@@ -1,25 +1,16 @@
 describe 'weatherService', ->
-  require '../../testHelpers'
-  q = require 'q'
-
-  fs = require 'fs'
-  mockWeatherData =  fs.readFileSync('test/spec/server/testData/ForecastFromHelsinkiAndTurku.xml', 'utf-8').toString()
+  helpers = require '../../testHelpers'
   db = require('../../../../server/db/db')()
-  beforeEach( ->
+  weatherService = require '../../../../server/services/weatherService'
 
-    db.drop()
-    @weatherService = require '../../../../server/services/weatherService'
-    #mock httpRequest
-    @http = require '../../../../server/util/httpPromise'
-    @http.get = ->
-      q.fcall( -> mockWeatherData)
-  )
-
+  helpers.mockHttpGet('test/spec/server/testData/ForecastFromHelsinkiAndTurku.xml')
+  dropDbAndUpdateForecasts = ->
+    db.drop().then ->
+      weatherService.updateForecasts()
 
   it 'should update weather forecasts', ->
     @timeout(5000)
-    weatherService = @weatherService
-    weatherService.updateForecasts()
+    dropDbAndUpdateForecasts()
     .then  ->
       weatherService.getForecasts()
     .then (forecasts) ->
@@ -30,13 +21,12 @@ describe 'weatherService', ->
       turkuForecast.locationName.should.equal "Turku"
 
   it 'should throw error if no forecasts present', ->
-    @weatherService.getForecasts()
+    weatherService.getForecasts()
     .fail (error) ->
         error.should.exist
 
   it 'should get weather forecasts for location', ->
-    weatherService = @weatherService
-    weatherService.updateForecasts()
+      dropDbAndUpdateForecasts()
       .then  ->
         weatherService.getForecastsFor('Helsinki')
       .then (forecastsForLocation) ->
@@ -45,11 +35,11 @@ describe 'weatherService', ->
         forecastsForLocation.forecasts.should.have.length 36
 
   it 'should throw error if no forecasts found for location', ->
-    weatherService = @weatherService
-    weatherService.updateForecasts()
+    dropDbAndUpdateForecasts()
     .then ->
       weatherService.getForecastsFor("Tokyo")
         .fail (error) ->
           error.message.should.eql "No forecasts found for Tokyo"
+
 
 

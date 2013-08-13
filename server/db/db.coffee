@@ -22,7 +22,7 @@ module.exports = (dbName) ->
     )
 
   drop : ->
-    db.invoke('dropDatabase').then -> console.log "DROPPED Database"
+    db.invoke('dropDatabase')
 
   findLatest : (collection, projection) ->
     projection = projection || {}
