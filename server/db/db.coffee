@@ -14,12 +14,12 @@ module.exports = (dbName) ->
 
   insert : (collection, data) ->
     db.invoke('collection', collection)
-    .then( (collection) ->
+    .then (collection) ->
       console.log "starting insert"
-      collection.insert(data, {w : 1}))
-    .fail((error) ->
-        console.error "Insert failed: ",  error
-    )
+      collection.insert(data, {safe : true})
+    ,(error) ->
+      console.error "Insert failed: ",  error
+
 
   drop : ->
     db.invoke('dropDatabase')
@@ -43,7 +43,14 @@ module.exports = (dbName) ->
     db.invoke('collection', collection)
     .then (collection) ->
       collection.findOne(query)
-    .invoke('nextObject')
+
+  update : (collection, query, update) ->
+    db.invoke('collection', collection)
+    .then (collection) ->
+      collection.update(query, update, {safe : true})
+    ,(error) ->
+      console.error "update failed: ",  error
+
 
 
 
