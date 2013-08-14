@@ -12,7 +12,6 @@ senderTask = ->
   timeOfPreviousTask = new Date(justNow.getTime() - taskInterval)
   userService.getUsersWhoWantNotificationsAtTimeframe(timeOfPreviousTask, justNow)
   .then (users) ->
-      console.log users
       getUsersWithOnlyTasksThatNeedNotifying(users)
   .then (users) ->
       countAndSendNotifications(users)
