@@ -10,9 +10,9 @@ describe 'userService', ->
     startTime = new Date(10)
     endTime = new Date(20)
     db.drop().then ->
-      user1 = userService.addUser(new User(startTime, []))
-      user2 = userService.addUser(new User(new Date(9), []))
-      user3 = userService.addUser(new User(new Date(21), []))
+      user1 = userService.addUser(new User(1, startTime, []))
+      user2 = userService.addUser(new User(2, new Date(9), []))
+      user3 = userService.addUser(new User(3, new Date(21), []))
       q.all(user1, user2, user3)
     .then ->
       userService.getUsersWhoWantNotificationsAtTimeframe(startTime, endTime)

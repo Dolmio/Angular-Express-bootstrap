@@ -24,7 +24,7 @@ describe 'senderTask', ->
   it 'should send notification', ->
     weatherQuery = new WeatherQuery("any", "temperature", "greaterThan", 15, 0,3)
     weatherQuery.locationName = "Helsinki"
-    user = new User(new Date(), [weatherQuery])
+    user = new User(1, new Date(), [weatherQuery])
 
     dropDbAndUpdateForecasts()
     .then ->
@@ -37,7 +37,7 @@ describe 'senderTask', ->
   it 'should not find any notifications to send', ->
     weatherQuery = new WeatherQuery("any", "temperature", "greaterThan", 35, 0,23)
     weatherQuery.locationName = "Helsinki"
-    user = new User(now, [weatherQuery])
+    user = new User(1, now, [weatherQuery])
     dropDbAndUpdateForecasts()
     .then ->
       userService.addUser(user)
@@ -49,7 +49,7 @@ describe 'senderTask', ->
   it 'should not find any notifications when invalid locationName', ->
     weatherQuery = new WeatherQuery("any", "temperature", "greaterThan", 15, 0,3)
     weatherQuery.locationName = "Timbuktu"
-    user = new User(new Date(), [weatherQuery])
+    user = new User(1, new Date(), [weatherQuery])
     dropDbAndUpdateForecasts()
     .then ->
       userService.addUser(user)
