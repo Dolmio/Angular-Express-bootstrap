@@ -8,7 +8,7 @@ module.exports =
     _.extend storedQueries[queryName], {locationName: locationName}
 
 storedQueries =
-  rainyInTheMorning : new WeatherQuery("any", "humidity", "greaterThan", 80, 7,9)
+  rainyInTheMorning : new WeatherQuery("any", "humidity", "greaterThan", 80, 7,9, "")
 
 
 
